@@ -1,7 +1,7 @@
 project-euler
 =============
 
-https://projecteuler.net
+https://projecteuler.net/profile/Krym.png
 
 // for now only :)
 var i = 3, a=0, t1 = Date.now();
