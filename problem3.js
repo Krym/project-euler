@@ -6,7 +6,7 @@ t1 = process.hrtime()[1];
 
 while (!utils.isPrime(number)) {
 
-    if ((number % divider === 0)) {
+    if (number % divider === 0) {
         number = number / divider;
     } else {
         divider = utils.nextPrime(divider);
