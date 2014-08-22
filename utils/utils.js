@@ -3,15 +3,18 @@ module.exports.isPrime = function(n) {
     if (n < 2) {
        return false
     }
+    if (n === 2) {
+        return true;
+    }
 
     var i = 3,
-       l = Math.sqrt(n);
+        l = Math.sqrt(n);
 
     if (n % 2 === 0) {
-        return true;
+        return false;
     } else {
         for (i; i <= l; i += 2) {
-            if (n % i == 0) {
+            if (n % i === 0) {
                 return false;
             }
         }
