@@ -24,6 +24,25 @@ module.exports.isPrime = function(n) {
 
 };
 
+module.exports.getPrimes = function(max) {
+
+    var i, j,
+        sieve = [],
+        primes = [];
+
+    for (i = 2; i <= max; i++) {
+        if (!sieve[i]) {
+            primes.push(i);
+            for (j = i * 2; j <= max; j += i) {
+                sieve[j] = true;
+            }
+        }
+    }
+
+    return primes;
+
+}
+
 module.exports.nextPrime = function(n) {
 
     n++;
