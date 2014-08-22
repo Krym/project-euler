@@ -19,16 +19,31 @@ module.exports.isPrime = function(n) {
 
     return true;
 
-}
+};
 
 module.exports.nextPrime = function(n) {
 
     n++;
-    
+
     while (!this.isPrime(n)) {
         n++;
     }
 
     return n;
+
+};
+
+module.exports.isPalindrome = function(n) {
+
+    n = n.toString();
+    var l = n.length;
+
+    for (var i = 0; i < l/2; i++) {
+        if (n[i] !== n[l-1-i]) {
+            return false
+        }
+    }
+
+    return true
 
 }
